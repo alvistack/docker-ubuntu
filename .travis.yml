@@ -23,7 +23,7 @@ script:
   - travis_retry docker build -t "$IMAGE" .
   - ~/official-images/test/run.sh "$IMAGE"
 
-deploy:
+after_success:
   - |
     if [[ -n "$TRAVIS_TAG" ]]; then
       docker tag "$IMAGE" "$IMAGE":"$TRAVIS_TAG"
