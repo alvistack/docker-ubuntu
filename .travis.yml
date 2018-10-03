@@ -1,0 +1,29 @@
+language: bash
+
+services: docker
+
+install:
+  - git clone https://github.com/docker-library/official-images.git ~/official-images
+
+before_script:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker version
+  - docker info
+  - IMAGE=$(echo $TRAVIS_REPO_SLUG | sed 's/\/docker-/\//g')
+
+script:
+  - travis_retry docker build -t "$IMAGE" .
+  - ~/official-images/test/run.sh "$IMAGE"
+
+after_success:
+  - |
+    if [[ -n "$TRAVIS_TAG" ]]; then
+      docker tag "$IMAGE" "$IMAGE":"$TRAVIS_TAG"
+      docker push "$IMAGE":"$TRAVIS_TAG"
+    elif [[ "$TRAVIS_BRANCH" =~ master ]]; then
+      docker tag "$IMAGE" "$IMAGE":latest
+      docker push "$IMAGE":latest
+    else
+      docker tag "$IMAGE" "$IMAGE":"$TRAVIS_BRANCH"
+      docker push "$IMAGE":"$TRAVIS_BRANCH"
+    fi
