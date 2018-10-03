@@ -1,5 +1,5 @@
 Docker Image Packaging for Ubuntu
-===============================
+=================================
 
 [![Travis](https://img.shields.io/travis/alvistack/docker-ubuntu.svg)](https://travis-ci.org/alvistack/docker-ubuntu)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/releases)

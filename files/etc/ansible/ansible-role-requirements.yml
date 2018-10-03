@@ -1,19 +1,29 @@
 ---
 
-- src: https://github.com/alvistack/ansible-role-ansible
-  version: develop
-
 - src: https://github.com/alvistack/ansible-role-python
   version: develop
+  name: python
 
 - src: https://github.com/alvistack/ansible-role-apt
   version: develop
+  name: apt
 
 - src: https://github.com/alvistack/ansible-role-yum
   version: develop
+  name: yum
+
+- src: https://github.com/alvistack/ansible-role-ansible
+  version: develop
+  name: ansible
 
 - src: https://github.com/alvistack/ansible-role-git
   version: develop
+  name: git
+
+- src: https://github.com/alvistack/ansible-role-locales
+  version: develop
+  name: locales
 
 - src: https://github.com/alvistack/ansible-role-sshd
   version: develop
+  name: sshd

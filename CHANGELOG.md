@@ -1,5 +1,5 @@
 Docker Image Packaging for Ubuntu
-===============================
+=================================
 
 16.04-0alvistack1 - 2018-10-03
 ------------------------------
@@ -8,3 +8,4 @@ Docker Image Packaging for Ubuntu
 -   Running SSHD with Docker
 -   Handle ENTRYPOINT with dumb-init
 -   Pre-install with Ansible for self-configuration
+
