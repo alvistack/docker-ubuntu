@@ -37,16 +37,15 @@ RUN set -ex \
 RUN set -ex \
     && curl -sL https://bootstrap.pypa.io/get-pip.py | python
 
-# Install dumb-init
+# Install Ansible
 RUN set -ex \
-    && curl -skL https://github.com/Yelp/dumb-init/releases/download/v1.2.2/dumb-init_1.2.2_amd64 > /usr/local/bin/dumb-init \
-    && chmod 0755 /usr/local/bin/dumb-init
+    && pip install --upgrade ansible \
+    && rm -rf /root/.cache/pip
 
 # Copy files
 COPY files /
 
-# Initialize with Ansible
+# Bootstrap with Ansible
 RUN set -ex \
-    && pip install --upgrade --requirement /etc/ansible/requirements.txt \
-    && ansible-galaxy install --force --role-file /etc/ansible/ansible-role-requirements.yml \
+    && ansible-galaxy install --force --roles-path /etc/ansible/roles --role-file /etc/ansible/ansible-role-requirements.yml \
     && ansible-playbook /etc/ansible/playbooks/bootstrap.yml

@@ -21,12 +21,14 @@
   gather_facts: no
   roles:
     - role: python
+    - role: ansible
+    - role: apt
+    - role: yum
 
 - hosts: all
   remote_user: root
   roles:
-    - role: apt
-    - role: ansible
+    - role: dumb-init
     - role: git
     - role: locales
     - role: sshd
@@ -44,6 +46,17 @@
       with_items:
         - { dest: "/root/.ssh", owner: "root", group: "root", mode: "0700", state: "directory" }
         - { dest: "/root/.ssh/authorized_keys", owner: "root", group: "root", mode: "0600", state: "file" }
+
+    - name: flush pip cache
+      file:
+        dest: "{{ item.dest }}"
+        state: "{{ item.state }}"
+        owner: "{{ item.owner }}"
+        group: "{{ item.group }}"
+        mode: "{{ item.mode }}"
+      with_items:
+        - { state: "absent", dest: "/root/.cache/pip", owner: "root", group: "root", mode: "0755" }
+      changed_when: false
 
     - name: flush apt lists cache
       file:
