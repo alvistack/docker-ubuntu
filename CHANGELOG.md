@@ -1,7 +1,7 @@
 Docker Image Packaging for Ubuntu
 =================================
 
-16.04-0alvistack1 - 2018-10-03
+18.04-0alvistack1 - 2018-10-08
 ------------------------------
 
 -   Ubuntu 16.04/18.04 based
