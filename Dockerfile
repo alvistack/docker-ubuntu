@@ -30,7 +30,7 @@ CMD        [ "docker-entrypoint.sh" ]
 # Prepare APT depedencies
 RUN set -ex \
     && apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y curl git python-dev python-minimal \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install curl git python-dev python-minimal \
     && rm -rf /var/lib/apt/lists/*
 
 # Install PIP
