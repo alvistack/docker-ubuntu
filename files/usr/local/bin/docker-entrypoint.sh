@@ -11,4 +11,4 @@ for type in dsa ecdsa ed25519 rsa; do
 done
 
 # Running sshd in foreground
-exec sshd -eD
+exec /usr/sbin/sshd -eD
