@@ -35,7 +35,7 @@ RUN set -ex \
 
 # Install PIP
 RUN set -ex \
-    && curl -sL https://bootstrap.pypa.io/get-pip.py | python
+    && curl -skL https://bootstrap.pypa.io/get-pip.py | python
 
 # Install Ansible
 RUN set -ex \
