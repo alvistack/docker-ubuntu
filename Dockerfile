@@ -39,7 +39,7 @@ RUN set -ex \
 
 # Install Ansible
 RUN set -ex \
-    && pip install --upgrade ansible \
+    && pip install ansible \
     && rm -rf /root/.cache/pip
 
 # Copy files
