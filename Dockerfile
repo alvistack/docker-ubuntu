@@ -25,7 +25,7 @@ WORKDIR "/root"
 EXPOSE 22
 
 ENTRYPOINT [ "dumb-init", "--" ]
-CMD        [ "/usr/sbin/sshd", "-eD" ]
+CMD        [ "docker-entrypoint.sh" ]
 
 # Prepare APT depedencies
 RUN set -ex \
