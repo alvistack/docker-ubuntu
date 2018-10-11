@@ -39,7 +39,7 @@ RUN set -ex \
 
 # Install Ansible
 RUN set -ex \
-    && pip install ansible \
+    && pip install ansible yamllint \
     && rm -rf /root/.cache/pip
 
 # Copy files
@@ -48,4 +48,7 @@ COPY files /
 # Bootstrap with Ansible
 RUN set -ex \
     && ansible-galaxy install --force --roles-path /etc/ansible/roles --role-file /etc/ansible/ansible-role-requirements.yml \
-    && ansible-playbook /etc/ansible/playbooks/bootstrap.yml
+    && yamllint --config-file /etc/ansible/.yamllint /etc/ansible \
+    && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --syntax-check \
+    && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --diff \
+    && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --diff
