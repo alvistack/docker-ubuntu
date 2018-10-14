@@ -27,7 +27,3 @@
 - name: sshd
   src: https://github.com/alvistack/ansible-role-sshd
   version: develop
-
-- name: dumb-init
-  src: https://github.com/alvistack/ansible-role-dumb-init
-  version: develop

@@ -31,7 +31,6 @@
     - role: git
     - role: locales
     - role: sshd
-    - role: dumb-init
 
 - hosts: all
   remote_user: root
