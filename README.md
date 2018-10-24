@@ -1,5 +1,4 @@
-Docker Image Packaging for Ubuntu
-=================================
+# Docker Image Packaging for Ubuntu
 
 [![Travis](https://img.shields.io/travis/alvistack/docker-ubuntu.svg)](https://travis-ci.org/alvistack/docker-ubuntu)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/releases)
@@ -10,23 +9,21 @@ Ubuntu is a free and open-source operating system and Linux distribution based o
 
 Learn more about Ubuntu: <https://www.ubuntu.com/>
 
-Supported Tags and Respective `Dockerfile` Links
-------------------------------------------------
+## Supported Tags and Respective `Dockerfile` Links
 
--   [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/master/Dockerfile)
--   [`18.04` (18.04/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/18.04/Dockerfile)
--   [`16.04` (16.04/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/16.04/Dockerfile)
+  - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/master/Dockerfile)
+  - [`18.04` (18.04/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/18.04/Dockerfile)
+  - [`16.04` (16.04/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/16.04/Dockerfile)
 
-Overview
---------
+## Overview
 
 This Docker container makes it easy to get an instance of SSHD up and running with Ubuntu.
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
--   Handle `ENTRYPOINT` with [dumb-init](https://github.com/Yelp/dumb-init)
--   Handle `CMD` with SSHD
--   Self initialize with Ansible, by dogfooding with Ansible Playbook
+  - Handle `ENTRYPOINT` with [dumb-init](https://github.com/Yelp/dumb-init)
+  - Handle `CMD` with SSHD
+  - Self initialize with Ansible, by dogfooding with Ansible Playbook
 
 ### Quick Start
 
@@ -61,21 +58,17 @@ Now you could SSH to it as normal:
 
     ssh root@localhost -p 2222
 
-Versioning
-----------
+## Versioning
 
 The `latest` tag matches the most recent version of this repository. Thus using `alvistack/ubuntu:latest` or `alvistack/ubuntu` will ensure you are running the most up to date version of this image.
 
-License
--------
+## License
 
--   Code released under [Apache License 2.0](LICENSE)
--   Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+  - Code released under [Apache License 2.0](LICENSE)
+  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
-Author Information
-------------------
+## Author Information
 
--   Wong Hoi Sing Edison
-    -   <https://twitter.com/hswong3i>
-    -   <https://github.com/hswong3i>
-
+  - Wong Hoi Sing Edison
+      - <https://twitter.com/hswong3i>
+      - <https://github.com/hswong3i>
