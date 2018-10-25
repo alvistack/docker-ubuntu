@@ -28,6 +28,7 @@
     - role: ansible
     - role: apt
     - role: yum
+    - role: duplicity
     - role: git
     - role: locales
     - role: sshd

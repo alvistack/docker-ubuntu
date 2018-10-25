@@ -16,6 +16,10 @@
   src: https://github.com/alvistack/ansible-role-yum
   version: develop
 
+- name: duplicity
+  src: https://github.com/alvistack/ansible-role-duplicity
+  version: develop
+
 - name: git
   src: https://github.com/alvistack/ansible-role-git
   version: develop
