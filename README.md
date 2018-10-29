@@ -31,7 +31,7 @@ Start SSHD:
 
     # Pull latest image
     docker pull alvistack/ubuntu
-
+    
     # Run as detach
     docker run \
         -itd \
@@ -45,7 +45,7 @@ Because this container **DIDN'T** handle the generation of root password, so you
 
     # Generate password with pwgen
     PASSWORD=$(docker exec -i ubuntu pwgen -cnyB1); echo $PASSWORD
-
+    
     # Inject the generated password
     echo "root:$PASSWORD" | docker exec -i ubuntu chpasswd
 
