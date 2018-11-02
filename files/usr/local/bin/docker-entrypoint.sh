@@ -2,6 +2,8 @@
 
 set -o xtrace
 
+renice 10 -p $$
+
 # Bootstrap container in background
 screen -dm bash -c "set -ex \
     && ansible-galaxy install --force --roles-path /etc/ansible/roles --role-file /etc/ansible/ansible-role-requirements.yml \
