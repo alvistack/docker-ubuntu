@@ -21,18 +21,21 @@
   gather_facts: no
   roles:
     - role: python
+    - role: ansible
+    - role: apt
+    - role: yum
+    - role: locales
+    - role: sshd
+    - role: dumb-init
 
 - hosts: all
   remote_user: root
   roles:
-    - role: ansible
-    - role: apt
-    - role: yum
     - role: duplicity
     - role: git
-    - role: locales
-    - role: sshd
-    - role: dumb-init
+    - role: java
+    - role: nodejs
+    - role: php
 
 - hosts: all
   remote_user: root
