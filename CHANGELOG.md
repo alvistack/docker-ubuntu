@@ -2,7 +2,18 @@
 
 ## 18.04.1-0alvistackx - TBC
 
+## 18.04.1-0alvistack4 - 2018-11-20
+
+### Major Changes
+
+  - Deploy with roles in master branch
+  - CI with ansible-lint
+  - Add /root/.ssh/config
+  - Set correct permission for /root/.ssh during bootup
+
 ## 18.04.1-0alvistack3 - 2018-11-09
+
+### Major Changes
 
   - Skip container re-bootstrap in background during bootup
   - Preinstall with PHP, Node.js and Java

@@ -37,9 +37,9 @@ RUN set -ex \
 RUN set -ex \
     && curl -skL https://bootstrap.pypa.io/get-pip.py | python
 
-# Install Ansible
+# Install PIP dependencies
 RUN set -ex \
-    && pip install ansible yamllint \
+    && pip install ansible ansible-lint yamllint \
     && rm -rf /root/.cache/pip
 
 # Copy files
@@ -49,6 +49,7 @@ COPY files /
 RUN set -ex \
     && ansible-galaxy install --force --roles-path /etc/ansible/roles --role-file /etc/ansible/ansible-role-requirements.yml \
     && yamllint --config-file /etc/ansible/.yamllint /etc/ansible \
+    && ansible-lint /etc/ansible/playbooks/bootstrap.yml \
     && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --syntax-check \
     && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --diff \
     && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --diff

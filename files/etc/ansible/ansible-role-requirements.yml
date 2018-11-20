@@ -2,48 +2,48 @@
 
 - name: ansible
   src: https://github.com/alvistack/ansible-role-ansible
-  version: develop
+  version: master
 
 - name: apt
   src: https://github.com/alvistack/ansible-role-apt
-  version: develop
+  version: master
 
 - name: dumb-init
   src: https://github.com/alvistack/ansible-role-dumb-init
-  version: develop
+  version: master
 
 - name: duplicity
   src: https://github.com/alvistack/ansible-role-duplicity
-  version: develop
+  version: master
 
 - name: git
   src: https://github.com/alvistack/ansible-role-git
-  version: develop
+  version: master
 
 - name: java
   src: https://github.com/alvistack/ansible-role-java
-  version: develop
+  version: master
 
 - name: locales
   src: https://github.com/alvistack/ansible-role-locales
-  version: develop
+  version: master
 
 - name: nodejs
   src: https://github.com/alvistack/ansible-role-nodejs
-  version: develop
+  version: master
 
 - name: php
   src: https://github.com/alvistack/ansible-role-php
-  version: develop
+  version: master
 
 - name: python
   src: https://github.com/alvistack/ansible-role-python
-  version: develop
+  version: master
 
 - name: sshd
   src: https://github.com/alvistack/ansible-role-sshd
-  version: develop
+  version: master
 
 - name: yum
   src: https://github.com/alvistack/ansible-role-yum
-  version: develop
+  version: master
