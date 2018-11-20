@@ -40,17 +40,6 @@
 - hosts: all
   remote_user: root
   tasks:
-    - name: prepare files
-      file:
-        dest: "{{ item.dest }}"
-        owner: "{{ item.owner }}"
-        group: "{{ item.group }}"
-        mode: "{{ item.mode }}"
-        state: "{{ item.state }}"
-      with_items:
-        - { dest: "/root/.ssh", owner: "root", group: "root", mode: "0700", state: "directory" }
-        - { dest: "/root/.ssh/authorized_keys", owner: "root", group: "root", mode: "0600", state: "file" }
-
     - name: flush pip cache
       file:
         dest: "{{ item.dest }}"
