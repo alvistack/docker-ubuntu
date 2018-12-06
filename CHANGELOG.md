@@ -2,6 +2,14 @@
 
 ## 18.04.1-0alvistackx - TBC
 
+## 18.04.1-0alvistack7 - 2018-12-06
+
+### Major Changes
+
+  - Add CVS, SVN, GIT, Mercurial and Perforce support
+  - Replace Oracle Java JDK with OpenJDK
+  - Upgrade Node.js version
+
 ## 18.04.1-0alvistack4 - 2018-11-20
 
 ### Major Changes
