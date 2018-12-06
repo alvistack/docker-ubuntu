@@ -32,7 +32,11 @@
   remote_user: root
   roles:
     - role: duplicity
+    - role: cvs
+    - role: svn
     - role: git
+    - role: mercurial
+    - role: perforce
     - role: java
     - role: nodejs
     - role: php
