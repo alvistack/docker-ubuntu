@@ -8,6 +8,10 @@
   src: https://github.com/alvistack/ansible-role-apt
   version: master
 
+- name: cvs
+  src: https://github.com/alvistack/ansible-role-cvs
+  version: master
+
 - name: dumb-init
   src: https://github.com/alvistack/ansible-role-dumb-init
   version: master
@@ -16,24 +20,8 @@
   src: https://github.com/alvistack/ansible-role-duplicity
   version: master
 
-- name: cvs
-  src: https://github.com/alvistack/ansible-role-cvs
-  version: master
-
-- name: svn
-  src: https://github.com/alvistack/ansible-role-svn
-  version: master
-
 - name: git
   src: https://github.com/alvistack/ansible-role-git
-  version: master
-
-- name: mercurial
-  src: https://github.com/alvistack/ansible-role-mercurial
-  version: master
-
-- name: perforce
-  src: https://github.com/alvistack/ansible-role-perforce
   version: master
 
 - name: java
@@ -44,8 +32,16 @@
   src: https://github.com/alvistack/ansible-role-locales
   version: master
 
+- name: mercurial
+  src: https://github.com/alvistack/ansible-role-mercurial
+  version: master
+
 - name: nodejs
   src: https://github.com/alvistack/ansible-role-nodejs
+  version: master
+
+- name: perforce
+  src: https://github.com/alvistack/ansible-role-perforce
   version: master
 
 - name: php
@@ -58,6 +54,14 @@
 
 - name: sshd
   src: https://github.com/alvistack/ansible-role-sshd
+  version: master
+
+- name: svn
+  src: https://github.com/alvistack/ansible-role-svn
+  version: master
+
+- name: timezone
+  src: https://github.com/alvistack/ansible-role-timezone
   version: master
 
 - name: yum

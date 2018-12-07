@@ -25,6 +25,7 @@
     - role: apt
     - role: yum
     - role: locales
+    - role: timezone
     - role: sshd
     - role: dumb-init
 
