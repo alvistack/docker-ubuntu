@@ -26,7 +26,6 @@
     - role: yum
     - role: locales
     - role: timezone
-    - role: sshd
     - role: dumb-init
 
 - hosts: all
@@ -41,6 +40,7 @@
     - role: java
     - role: nodejs
     - role: php
+    - role: sshd
 
 - hosts: all
   remote_user: root
