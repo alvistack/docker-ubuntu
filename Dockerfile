@@ -27,10 +27,10 @@ EXPOSE 22
 ENTRYPOINT [ "dumb-init", "--" ]
 CMD        [ "docker-entrypoint.sh" ]
 
-# Prepare APT depedencies
+# Prepare APT dependencies
 RUN set -ex \
     && apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential curl git libffi-dev libssl-dev python python-dev \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install ca-certificates curl gcc git libffi-dev libssl-dev make python python-dev sudo \
     && rm -rf /var/lib/apt/lists/*
 
 # Install PIP
