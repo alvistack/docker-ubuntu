@@ -2,9 +2,14 @@
 
 ## 18.04.2-0alvistackx - TBC
 
-## 18.04.2-0alvistack3 - 2019-04-15
+### Major Changes
+
+## 18.04.2-0alvistack4 - 2019-04-15
+
+### Major Changes
 
   - Porting to Molecule based
+  - Add rclone support
 
 ## 18.04.1-0alvistack7 - 2018-12-06
 

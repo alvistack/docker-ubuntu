@@ -28,6 +28,7 @@
   remote_user: root
   roles:
     - role: duplicity
+    - role: rclone
     - role: cvs
     - role: svn
     - role: git
