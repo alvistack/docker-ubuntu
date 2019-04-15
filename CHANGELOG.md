@@ -1,6 +1,10 @@
 # Docker Image Packaging for Ubuntu
 
-## 18.04.1-0alvistackx - TBC
+## 18.04.2-0alvistackx - TBC
+
+## 18.04.2-0alvistack3 - 2019-04-15
+
+  - Porting to Molecule based
 
 ## 18.04.1-0alvistack7 - 2018-12-06
 
