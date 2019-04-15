@@ -40,16 +40,15 @@ RUN set -ex \
 # Install PIP dependencies
 RUN set -ex \
     && pip install ansible ansible-lint yamllint \
-    && rm -rf /root/.cache/pip
+    && rm -rf /root/.cache/*
 
 # Copy files
 COPY files /
 
 # Bootstrap with Ansible
 RUN set -ex \
-    && ansible-galaxy install --force --roles-path /etc/ansible/roles --role-file /etc/ansible/ansible-role-requirements.yml \
-    && yamllint --config-file /etc/ansible/.yamllint /etc/ansible \
-    && ansible-lint /etc/ansible/playbooks/bootstrap.yml \
-    && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --syntax-check \
-    && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --diff \
-    && ansible-playbook /etc/ansible/playbooks/bootstrap.yml --diff
+    && cd /etc/ansible/roles/localhost \
+    && molecule test \
+    && rm -rf /root/.cache/* \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /tmp/*
