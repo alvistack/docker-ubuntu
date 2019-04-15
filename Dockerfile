@@ -49,6 +49,6 @@ COPY files /
 RUN set -ex \
     && cd /etc/ansible/roles/localhost \
     && molecule test \
-    && rm -rf /root/.cache/* \
     && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /root/.cache/* \
     && rm -rf /tmp/*
