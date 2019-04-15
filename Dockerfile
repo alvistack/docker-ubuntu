@@ -39,7 +39,7 @@ RUN set -ex \
 
 # Install PIP dependencies
 RUN set -ex \
-    && pip install ansible ansible-lint molecule yamllint \
+    && pip install --upgrade ansible ansible-lint molecule yamllint \
     && rm -rf /root/.cache/*
 
 # Copy files
