@@ -4,6 +4,13 @@
 
 ### Major Changes
 
+## 18.04.2-0alvistack8 - 2019-05-20
+
+### Major Changes
+
+  - Bugfix "Build times out because no output was received"
+  - Upgrade minimal Ansible support to 2.8.0
+
 ## 18.04.2-0alvistack6 - 2019-04-15
 
 ### Major Changes
