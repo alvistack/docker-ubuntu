@@ -7,11 +7,6 @@ if [ "${1:0:1}" = '-' ]; then
     set -- sshd "$@"
 fi
 
-# Allow the container to be stated with `--user`
-if [ "$1" = 'sshd' ] && [ "$(id -u)" = '0' ]; then
-    exec gosu root "$BASH_SOURCE" "$@"
-fi
-
 if [ "$1" = 'sshd' ]; then
     # Regenerate OpenSSH host keys
     rm -rf /etc/ssh/ssh_host_*
