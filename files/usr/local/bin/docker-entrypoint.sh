@@ -4,10 +4,10 @@ set -o xtrace
 
 # Prepend executable if command starts with an option
 if [ "${1:0:1}" = '-' ]; then
-    set -- sshd "$@"
+    set -- /usr/sbin/sshd "$@"
 fi
 
-if [ "$1" = 'sshd' ]; then
+if [ "$1" = '/usr/sbin/sshd' ]; then
     # Regenerate OpenSSH host keys
     rm -rf /etc/ssh/ssh_host_*
     ssh-keygen -A
