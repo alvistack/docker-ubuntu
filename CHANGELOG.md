@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Default with Python 3
+
 ## 18.04.2-0alvistack8 - 2019-05-20
 
 ### Major Changes
