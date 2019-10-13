@@ -12,8 +12,9 @@ if [ "$1" = '/usr/sbin/sshd' ]; then
     rm -rf /etc/ssh/ssh_host_*
     ssh-keygen -A
 
-    # Set correct permission for /root
-    chown -Rf root:root /root
+    # Set correct permission for /root/.ssh
+    mkdir -p /root/.ssh
+    chown root:root /root/.ssh
     chmod 0700 /root/.ssh
     chmod 0600 /root/.ssh/*
 fi
