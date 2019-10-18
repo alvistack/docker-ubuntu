@@ -39,3 +39,4 @@
     - role: duplicity
     - role: rclone
     - role: sshd
+    - role: localhost
