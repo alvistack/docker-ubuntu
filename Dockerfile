@@ -12,12 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM ubuntu:18.04
+FROM alvistack/ubuntu:18.04-slim
 
 ENV LANG   "en_US.utf8"
 ENV LC_ALL "en_US.utf8"
 ENV SHELL  "/bin/bash"
 ENV TZ     "UTC"
+
+VOLUME  "/root"
+WORKDIR "/root"
+
+EXPOSE 22
+
+ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+CMD        [ "/usr/sbin/sshd", "-eD" ]
 
 # Hotfix for en_US.utf8 locale
 RUN set -ex \
