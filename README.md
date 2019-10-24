@@ -12,6 +12,7 @@ Learn more about Ubuntu: <https://www.ubuntu.com/>
 ## Supported Tags and Respective `Dockerfile` Links
 
   - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/master/Dockerfile)
+  - [`18.04-slim` (18.04-slim/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/18.04-slim/Dockerfile)
   - [`18.04` (18.04/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/18.04/Dockerfile)
   - [`16.04` (16.04/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/16.04/Dockerfile)
 
