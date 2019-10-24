@@ -36,10 +36,9 @@ RUN set -ex \
 RUN set -ex \
     && curl -skL https://bootstrap.pypa.io/get-pip.py | python3
 
-# Purge and recreate /etc/ansible
+# Purge /etc/ansible
 RUN set -ex \
-    && rm -rf /etc/ansible \
-    && mkdir -p /etc/ansible
+    && rm -rf /etc/ansible
 
 # Copy files
 COPY files /
