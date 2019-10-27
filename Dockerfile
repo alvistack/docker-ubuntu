@@ -19,6 +19,14 @@ ENV LC_ALL "en_US.utf8"
 ENV SHELL  "/bin/bash"
 ENV TZ     "UTC"
 
+VOLUME  "/root"
+WORKDIR "/root"
+
+EXPOSE 22
+
+ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+CMD        [ "/usr/sbin/sshd", "-eD" ]
+
 # Hotfix for en_US.utf8 locale
 RUN set -ex \
     && apt-get update \
@@ -35,10 +43,6 @@ RUN set -ex \
 # Install PIP
 RUN set -ex \
     && curl -skL https://bootstrap.pypa.io/get-pip.py | python3
-
-# Purge /etc/ansible
-RUN set -ex \
-    && rm -rf /etc/ansible
 
 # Copy files
 COPY files /

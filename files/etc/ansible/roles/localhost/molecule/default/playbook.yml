@@ -24,3 +24,19 @@
     - role: ansible
     - role: dumb-init
     - role: gosu
+
+- hosts: all
+  remote_user: root
+  roles:
+    - role: cvs
+    - role: svn
+    - role: git
+    - role: mercurial
+    - role: perforce
+    - role: java
+    - role: nodejs
+    - role: php
+    - role: duplicity
+    - role: rclone
+    - role: sshd
+    - role: localhost
