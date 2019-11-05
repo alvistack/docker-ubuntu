@@ -1,10 +1,19 @@
 # Docker Image Packaging for Ubuntu
 
-## 18.04.2-0alvistackx - TBC
+## 18.04.3-XalvistackY - TBC
 
 ### Major Changes
 
+## 18.04.3-2alvistack3 - 2019-11-05
+
+### Major Changes
+
+  - Upgrade minimal Ansible support to 2.9.0
+  - Upgrade Travis CI test as Ubuntu Bionic based
   - Default with Python 3
+  - Hotfix for en\_US.utf8 locale
+  - Prepend executable if command starts with an option
+  - Improve `ENTRYPOINT` and `CMD`
 
 ## 18.04.2-0alvistack8 - 2019-05-20
 
