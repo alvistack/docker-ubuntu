@@ -16,7 +16,8 @@ if [ "$1" = '/usr/sbin/sshd' ]; then
 
     # Set correct permission for /root/.ssh
     mkdir -p /root/.ssh
-    chown root:root /root/.ssh
+    chown root:root /root
+    chmod 0700 /root
     chmod 0700 /root/.ssh
     chmod 0600 /root/.ssh/*
 fi
