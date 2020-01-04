@@ -19,6 +19,10 @@ ENV LC_ALL "en_US.utf8"
 ENV SHELL  "/bin/bash"
 ENV TZ     "UTC"
 
+ENV JAVA_RELEASE   "8"
+ENV NODEJS_RELEASE "12"
+ENV PHP_RELEASE    "7.3"
+
 VOLUME  "/root"
 WORKDIR "/root"
 
