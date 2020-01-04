@@ -15,6 +15,7 @@
 # limitations under the License.
 
 _apt:
+  - { state: "latest", name: "apache2-utils" }
   - { state: "latest", name: "mysql-client" }
   - { state: "latest", name: "postgresql-client" }
   - { state: "latest", name: "sqlite3" }
