@@ -14,6 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-java_release: "{{ lookup('env', 'JAVA_RELEASE') }}"
+openjdk_release: "{{ lookup('env', 'OPENJDK_RELEASE') }}"
 nodejs_release: "{{ lookup('env', 'NODEJS_RELEASE') }}"
 php_release: "{{ lookup('env', 'PHP_RELEASE') }}"
