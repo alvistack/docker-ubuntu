@@ -33,7 +33,7 @@
     - role: git
     - role: mercurial
     - role: perforce
-    - role: java
+    - role: openjdk
     - role: nodejs
     - role: php
     - role: duplicity
