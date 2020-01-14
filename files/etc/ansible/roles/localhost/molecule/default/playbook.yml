@@ -34,7 +34,7 @@
     - role: mercurial
     - role: perforce
     - role: openjdk
-    - role: nodejs
+    - role: node
     - role: php
     - role: duplicity
     - role: rclone

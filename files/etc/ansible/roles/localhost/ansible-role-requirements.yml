@@ -53,8 +53,8 @@
 - name: openjdk
   src: https://github.com/alvistack/ansible-role-openjdk/archive/master.tar.gz
 
-- name: nodejs
-  src: https://github.com/alvistack/ansible-role-nodejs/archive/master.tar.gz
+- name: node
+  src: https://github.com/alvistack/ansible-role-node/archive/master.tar.gz
 
 - name: php
   src: https://github.com/alvistack/ansible-role-php/archive/master.tar.gz
