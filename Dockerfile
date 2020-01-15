@@ -28,7 +28,7 @@ WORKDIR "/root"
 
 EXPOSE 22
 
-ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "/usr/sbin/sshd", "-eD" ]
 
 # Hotfix for en_US.utf8 locale
