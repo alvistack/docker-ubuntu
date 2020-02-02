@@ -22,7 +22,7 @@ This Docker container makes it easy to get an instance of SSHD up and running wi
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
   - Self initialize with Ansible, by dogfooding with Ansible Playbook
-  - Handle `ENTRYPOINT` with [dumb-init](https://github.com/Yelp/dumb-init)
+  - Handle `ENTRYPOINT` with [tini](https://github.com/krallin/tini)
   - Handle `CMD` with SSHD
 
 ### Quick Start
