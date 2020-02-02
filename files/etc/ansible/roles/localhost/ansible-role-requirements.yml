@@ -59,11 +59,11 @@
 - name: php
   src: https://github.com/alvistack/ansible-role-php/archive/master.tar.gz
 
-- name: duplicity
-  src: https://github.com/alvistack/ansible-role-duplicity/archive/master.tar.gz
-
 - name: rclone
   src: https://github.com/alvistack/ansible-role-rclone/archive/master.tar.gz
+
+- name: restic
+  src: https://github.com/alvistack/ansible-role-restic/archive/master.tar.gz
 
 - name: sshd
   src: https://github.com/alvistack/ansible-role-sshd/archive/master.tar.gz

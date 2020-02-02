@@ -36,7 +36,7 @@
     - role: openjdk
     - role: node
     - role: php
-    - role: duplicity
     - role: rclone
+    - role: restic
     - role: sshd
     - role: localhost
