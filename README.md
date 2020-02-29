@@ -11,9 +11,8 @@ Learn more about Ubuntu: <https://www.ubuntu.com/>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/master/Dockerfile)
-  - [`18.04` (18.04/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/18.04/Dockerfile)
-  - [`16.04` (16.04/Dockerfile)](https://github.com/alvistack/docker-ubuntu/blob/16.04/Dockerfile)
+  - [`18.04`, `latest` (molecule/18.04/Dockerfile.j2)](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/18.04/Dockerfile.j2)
+  - [`16.04` (molecule/16.04/Dockerfile.j2)](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/16.04/Dockerfile.j2)
 
 ## Overview
 
@@ -21,7 +20,8 @@ This Docker container makes it easy to get an instance of SSHD up and running wi
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
-  - Self initialize with Ansible, by dogfooding with Ansible Playbook
+  - Minimized `Dockerfile` for meta data definition
+  - Provision by Ansible and Molecule Docker driver in single layer
   - Handle `ENTRYPOINT` with [tini](https://github.com/krallin/tini)
   - Handle `CMD` with SSHD
 

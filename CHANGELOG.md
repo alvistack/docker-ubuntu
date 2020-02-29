@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Revamp with Molecule and `docker commit`
   - Replace `duplicity` with `restic`
 
 ## 18.04.3-alvistack1 - 2020-01-15
