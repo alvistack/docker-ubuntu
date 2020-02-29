@@ -38,18 +38,15 @@ after_success:
   - |
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
     export IMAGE=$(docker images | awk '{print $3}' | awk 'NR==2')
-    export REPOSITORY=$(echo $TRAVIS_REPO_SLUG | sed 's/\/docker-/\//g')
+    export REPO=$(echo $TRAVIS_REPO_SLUG | sed 's/\/docker-/\//g')
     if [[ -n "$TRAVIS_TAG" ]]; then
-      export VERSION=$(echo $TRAVIS_TAG | sed 's/-[0-9]*alvistack[0-9]*.*$//g')
-      if [[ "$MOLECULE_SCENARIO_NAME" =~ "$VERSION" ]]; then
-        export TAG=$TRAVIS_TAG
-        docker tag "$IMAGE" "$REPOSITORY":"$TAG"
-        docker push "$REPOSITORY":"$TAG"
-        docker tag "$IMAGE" "$REPOSITORY":latest
-        docker push "$REPOSITORY":latest
+      if [[ "$TRAVIS_TAG" =~ [^\$MOLECULE_SCENARIO_NAME] ]]; then
+        docker tag "$IMAGE" "$REPO":"$TRAVIS_TAG"
+        docker push "$REPO":"$TRAVIS_TAG"
+        docker tag "$IMAGE" "$REPO":latest
+        docker push "$REPO":latest
       fi
     elif [[ "$TRAVIS_BRANCH" =~ master ]]; then
-      export TAG=$MOLECULE_SCENARIO_NAME
-      docker tag "$IMAGE" "$REPOSITORY":"$TAG"
-      docker push "$REPOSITORY":"$TAG"
+      docker tag "$IMAGE" "$REPO":"$MOLECULE_SCENARIO_NAME"
+      docker push "$REPO":"$MOLECULE_SCENARIO_NAME"
     fi
