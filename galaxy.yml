@@ -22,10 +22,10 @@ version: MAJOR.MINOR.PATCH
 readme: README.md
 license: Apache-2.0
 
-repository: https://github.com/alvistack/docker-sshd
-documentation: https://github.com/alvistack/docker-sshd
-homepage: https://github.com/alvistack/docker-sshd
-issues: https://github.com/alvistack/docker-sshd/issues
+repository: https://github.com/alvistack/docker-ubuntu
+documentation: https://github.com/alvistack/docker-ubuntu
+homepage: https://github.com/alvistack/docker-ubuntu
+issues: https://github.com/alvistack/docker-ubuntu/issues
 
 dependencies: {}
 tags:
