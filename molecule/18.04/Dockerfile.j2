@@ -26,9 +26,9 @@ RUN set -ex \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
     && rm -rf /var/lib/apt/lists/*
 
-ENV OPENJDK_RELEASE "8"
-ENV NODE_RELEASE    "12"
-ENV PHP_RELEASE     "7.3"
+ENV OPENJDK_RELEASE "{{ openjdk_release }}"
+ENV NODE_RELEASE    "{{ node_release }}"
+ENV PHP_RELEASE     "{{ php_release }}"
 
 VOLUME  "/root"
 WORKDIR "/root"
