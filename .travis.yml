@@ -31,7 +31,6 @@ script:
       && sudo -E molecule lint -s $MOLECULE_SCENARIO_NAME \
       && sudo -E molecule syntax -s $MOLECULE_SCENARIO_NAME \
       && sudo -E molecule converge -s $MOLECULE_SCENARIO_NAME \
-      && travis_wait 120 sudo -E molecule idempotence -s $MOLECULE_SCENARIO_NAME \
       && sudo -E molecule verify -s $MOLECULE_SCENARIO_NAME
 
 after_success:
@@ -39,14 +38,12 @@ after_success:
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
     export IMAGE=$(docker images | awk '{print $3}' | awk 'NR==2')
     export REPO=$(echo $TRAVIS_REPO_SLUG | sed 's/\/docker-/\//g')
-    if [[ -n "$TRAVIS_TAG" ]]; then
-      if [[ "$TRAVIS_TAG" =~ [^\$MOLECULE_SCENARIO_NAME] ]]; then
-        docker tag "$IMAGE" "$REPO":"$TRAVIS_TAG"
-        docker push "$REPO":"$TRAVIS_TAG"
-        docker tag "$IMAGE" "$REPO":latest
-        docker push "$REPO":latest
-      fi
-    elif [[ "$TRAVIS_BRANCH" =~ master ]]; then
+    if [[ -n "$TRAVIS_TAG" ]] && [[ "$TRAVIS_TAG" =~ [^\$MOLECULE_SCENARIO_NAME] ]]; then
+      docker tag "$IMAGE" "$REPO":"$TRAVIS_TAG"
+      docker push "$REPO":"$TRAVIS_TAG"
+      docker tag "$IMAGE" "$REPO":latest
+      docker push "$REPO":latest
+    elif [[ "$TRAVIS_BRANCH" =~ [^master$] ]]; then
       docker tag "$IMAGE" "$REPO":"$MOLECULE_SCENARIO_NAME"
       docker push "$REPO":"$MOLECULE_SCENARIO_NAME"
     fi
