@@ -12,6 +12,7 @@ Learn more about Ubuntu: <https://www.ubuntu.com/>
 ## Supported Tags and Respective `Dockerfile` Links
 
   - [`18.04`, `latest` (molecule/18.04/Dockerfile.j2)](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/18.04/Dockerfile.j2)
+  - [`19.10` (molecule/19.10/Dockerfile.j2)](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/19.10/Dockerfile.j2)
   - [`16.04` (molecule/16.04/Dockerfile.j2)](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/16.04/Dockerfile.j2)
 
 ## Overview

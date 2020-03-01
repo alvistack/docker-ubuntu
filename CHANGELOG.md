@@ -5,6 +5,7 @@
 ### Major Changes
 
   - Revamp with Molecule and `docker commit`
+  - Add Ubuntu 19.10 support
   - Replace `duplicity` with `restic`
 
 ## 18.04.3-alvistack1 - 2020-01-15
