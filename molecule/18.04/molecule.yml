@@ -34,7 +34,6 @@ dependency:
     ignore-errors: true
 provisioner:
   name: ansible
-  log: true
   env:
     ANSIBLE_ROLES_PATH: ${ANSIBLE_ROLES_PATH}
   config_options:
