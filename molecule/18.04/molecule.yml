@@ -19,9 +19,8 @@ driver:
 platforms:
   - name: ${MOLECULE_INSTANCE_NAME}-1
     image: ubuntu:18.04
-    privileged: true
-    network_mode: host
     tty: true
+    privileged: true
     entrypoint: init
     command: 'bash -c "sleep infinity"'
     environment:
