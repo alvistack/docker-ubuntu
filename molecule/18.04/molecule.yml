@@ -18,7 +18,6 @@ driver:
   name: docker
 platforms:
   - name: ${MOLECULE_INSTANCE_NAME}-1
-    image: ubuntu:18.04
 lint: |
   set -e
   yamllint .
