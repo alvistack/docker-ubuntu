@@ -53,8 +53,6 @@
     mode: "{{ item.mode | default('0755') }}"
     state: "{{ item.state | default('directory') }}"
   loop:
-    - { dest: "/root", mode: "0700" }
-    - { dest: "/root/.ssh", mode: "0700" }
     - { dest: "/usr/local/bin" }
 
 - name: copy templates
@@ -65,9 +63,14 @@
     group: "{{ item.group | default('root') }}"
     mode: "{{ item.mode | default('0644') }}"
   loop:
-    - { dest: "/root/.profile" }
-    - { dest: "/root/.bashrc" }
-    - { dest: "/root/.ssh/authorized_keys", mode: "0600" }
-    - { dest: "/root/.ssh/config", mode: "0600" }
-    - { dest: "/root/.bash_logout" }
+    - { dest: "/usr/local/bin/docker-entrypoint.sh", mode: "0755" }
+
+- name: prepare files
+  file:
+    dest: "{{ item.dest }}"
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "{{ item.mode | default('0644') }}"
+    state: "{{ item.state | default('file') }}"
+  loop:
     - { dest: "/usr/local/bin/docker-entrypoint.sh", mode: "0755" }
