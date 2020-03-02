@@ -14,34 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-driver:
-  name: docker
-platforms:
-  - name: ${MOLECULE_INSTANCE_NAME}-1
-    image: ubuntu:19.10
-lint: |
-  set -e
-  yamllint .
-  ansible-lint
-  flake8
-dependency:
-  name: galaxy
-  options:
-    role-file: ansible-role-requirements.yml
-    roles-path: ${ANSIBLE_ROLES_PATH}
-    ignore-errors: true
-provisioner:
-  name: ansible
-  env:
-    ANSIBLE_ROLES_PATH: ${ANSIBLE_ROLES_PATH}
-  config_options:
-    defaults:
-      forks: 20
-    ssh_connection:
-      pipelining: true
-      ssh_args: -o ControlMaster=auto -o ControlPersist=600s
-  inventory:
-    links:
-      group_vars: group_vars
-verifier:
-  name: ansible
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: docker rm
+      docker_container:
+        name: "{{ item.name }}"
+        state: "absent"
+      loop_control:
+        label: "{{ item.name }}"
+      loop: "{{ molecule_yml.platforms }}"

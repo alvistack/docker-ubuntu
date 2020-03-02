@@ -19,14 +19,6 @@ driver:
 platforms:
   - name: ${MOLECULE_INSTANCE_NAME}-1
     image: ubuntu:18.04
-    tty: true
-    privileged: true
-    entrypoint: init
-    command: 'bash -c "sleep infinity"'
-    environment:
-      container: docker
-    volumes:
-      - '/sys/fs/cgroup:/sys/fs/cgroup:rw'
 lint: |
   set -e
   yamllint .
