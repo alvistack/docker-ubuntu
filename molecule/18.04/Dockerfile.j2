@@ -19,18 +19,6 @@ ENV LC_ALL "en_US.utf8"
 ENV SHELL  "/bin/bash"
 ENV TZ     "UTC"
 
-ENV OPENJDK_RELEASE "{{ openjdk_release }}"
-ENV NODE_RELEASE    "{{ node_release }}"
-ENV PHP_RELEASE     "{{ php_release }}"
-
-VOLUME  "/root"
-WORKDIR "/root"
-
-EXPOSE 22
-
-ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
-CMD        [ "/usr/sbin/sshd", "-eD" ]
-
 # Hotfix for systemd
 RUN set -ex \
     && apt-get update \
@@ -50,3 +38,15 @@ RUN set -ex \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y locales \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
     && rm -rf /var/lib/apt/lists/*
+
+ENV OPENJDK_RELEASE "{{ openjdk_release }}"
+ENV NODE_RELEASE    "{{ node_release }}"
+ENV PHP_RELEASE     "{{ php_release }}"
+
+VOLUME  "/root"
+WORKDIR "/root"
+
+EXPOSE 22
+
+ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
+CMD        [ "/usr/sbin/sshd", "-eD" ]
