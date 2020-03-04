@@ -16,28 +16,63 @@
 
 - hosts: all
   remote_user: root
-  pre_tasks:
-    - include_tasks: "./tasks/pre_tasks.yml"
+  tasks:
+    - include_tasks:
+        file: "./tasks/pre_tasks.yml"
 
-  roles:
-    - role: bootstrap
-    - role: python
-    - role: locales
-    - role: timezone
-    - role: tini
-    - role: gosu
-    - role: ansible
-    - role: cvs
-    - role: svn
-    - role: git
-    - role: mercurial
-    - role: perforce
-    - role: openjdk
-    - role: node
-    - role: php
-    - role: rclone
-    - role: restic
-    - role: sshd
+    - include_role:
+        name: bootstrap
 
-  post_tasks:
-    - include_tasks: "./tasks/post_tasks.yml"
+    - include_role:
+        name: python
+
+    - include_role:
+        name: locales
+
+    - include_role:
+        name: timezone
+
+    - include_role:
+        name: tini
+
+    - include_role:
+        name: gosu
+
+    - include_role:
+        name: ansible
+
+    - include_role:
+        name: cvs
+
+    - include_role:
+        name: svn
+
+    - include_role:
+        name: git
+
+    - include_role:
+        name: mercurial
+
+    - include_role:
+        name: perforce
+
+    - include_role:
+        name: openjdk
+
+    - include_role:
+        name: node
+
+    - include_role:
+        name: php
+
+    - include_role:
+        name: rclone
+
+    - include_role:
+        name: restic
+
+    - include_role:
+        name: sshd
+
+    - include_tasks:
+        file: "./tasks/post_tasks.yml"
