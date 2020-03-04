@@ -38,7 +38,7 @@
     - { dest: "/root/.ssh/authorized_keys", mode: "0600" }
     - { dest: "/root/.ssh/config", mode: "0600" }
     - { dest: "/root/.bash_logout" }
-    
+
 - name: prepare files
   file:
     dest: "{{ item.dest }}"
