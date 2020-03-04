@@ -1,12 +1,17 @@
 # Docker Image Packaging for Ubuntu
 
-## 18.04.3-XalvistackY - TBC
+## 18.04.4-XalvistackY - TBC
+
+### Major Changes
+
+## 18.04.4-4alvistack1 - 2020-03-04
 
 ### Major Changes
 
   - Revamp with Molecule and `docker commit`
-  - Add Ubuntu 19.10 support
+  - Hotfix for systemd
   - Replace `duplicity` with `restic`
+  - Add Ubuntu 19.10 support
 
 ## 18.04.3-alvistack1 - 2020-01-15
 
