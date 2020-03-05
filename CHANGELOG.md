@@ -4,11 +4,12 @@
 
 ### Major Changes
 
-## 18.04.4-4alvistack1 - 2020-03-04
+## 18.04.4-4alvistack4 - 2020-03-05
 
 ### Major Changes
 
   - Revamp with Molecule and `docker commit`
+  - Consolidate molecule tests into `default` (noop)
   - Hotfix for systemd
   - Replace `duplicity` with `restic`
   - Add Ubuntu 19.10 support
