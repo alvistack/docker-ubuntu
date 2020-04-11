@@ -14,4 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_apt: []
+_apt:
+  - { state: "latest", name: "mariadb-client" }
+  - { state: "latest", name: "postgresql-client" }
+  - { state: "latest", name: "sqlite3" }
