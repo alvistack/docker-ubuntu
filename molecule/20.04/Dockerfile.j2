@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 
 ENV LANG   "en_US.utf8"
 ENV LC_ALL "en_US.utf8"
@@ -23,6 +23,7 @@ ENV TZ     "UTC"
 RUN set -ex \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y systemd \
+    && ln -fs /lib/systemd/systemd /usr/sbin/init \
     && find /lib/systemd/system/sysinit.target.wants/ -name "systemd-tmpfiles-setup.service" -delete \
     && rm -f /lib/systemd/system/multi-user.target.wants/* \
     && rm -f /etc/systemd/system/*.wants/* \

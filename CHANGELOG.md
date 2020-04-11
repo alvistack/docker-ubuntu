@@ -4,6 +4,13 @@
 
 ### Major Changes
 
+## 18.04.4-4alvistack8 - 2020-04-11
+
+### Major Changes
+
+  - Add Ubuntu 20.04 support
+  - Remove Ubuntu 16.04 support
+
 ## 18.04.4-4alvistack4 - 2020-03-05
 
 ### Major Changes

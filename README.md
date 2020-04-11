@@ -1,6 +1,6 @@
 # Docker Image Packaging for Ubuntu
 
-[![Travis](https://img.shields.io/travis/alvistack/docker-ubuntu.svg)](https://travis-ci.org/alvistack/docker-ubuntu)
+[![Travis](https://img.shields.io/travis/com/alvistack/docker-ubuntu.svg)](https://travis-ci.com/alvistack/docker-ubuntu)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu.svg)](https://hub.docker.com/r/alvistack/ubuntu/)
@@ -11,9 +11,9 @@ Learn more about Ubuntu: <https://www.ubuntu.com/>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
+  - [`20.04`](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/20.04/Dockerfile.j2)
   - [`18.04`, `latest`](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/18.04/Dockerfile.j2)
   - [`19.10`](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/19.10/Dockerfile.j2)
-  - [`16.04`](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/16.04/Dockerfile.j2)
 
 ## Overview
 
@@ -67,7 +67,7 @@ The `latest` tag matches the most recent [GitHub Release](https://github.com/alv
 
 ### `alvistack/ubuntu:<version>`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.org/alvistack/docker-ubuntu) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-ubuntu) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
