@@ -34,20 +34,6 @@
             - "./vars"
       ignore_errors: true
 
-    - name: include release specific tasks
-      include_tasks: "{{ lookup('first_found', _params) }}"
-      vars:
-        _params:
-          files:
-            - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
-            - "{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-            - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
-            - "{{ ansible_distribution | lower }}.yml"
-            - "{{ ansible_os_family | lower }}.yml"
-          paths:
-            - "./tasks"
-      ignore_errors: true
-
     - name: prepare directories
       file:
         dest: "{{ item.dest }}"
@@ -56,7 +42,8 @@
         mode: "{{ item.mode | default('0755') }}"
         state: "{{ item.state | default('directory') }}"
       loop:
-        - { dest: "/usr/local/bin" }
+        - { dest: "/root", mode: "0700" }
+        - { dest: "/root/.ssh", mode: "0700" }
 
     - name: copy templates
       template:
@@ -66,7 +53,11 @@
         group: "{{ item.group | default('root') }}"
         mode: "{{ item.mode | default('0644') }}"
       loop:
-        - { dest: "/usr/local/bin/docker-entrypoint.sh", mode: "0755" }
+        - { dest: "/root/.profile" }
+        - { dest: "/root/.bashrc" }
+        - { dest: "/root/.ssh/authorized_keys", mode: "0600" }
+        - { dest: "/root/.ssh/config", mode: "0600" }
+        - { dest: "/root/.bash_logout" }
 
     - name: prepare files
       file:
@@ -76,58 +67,8 @@
         mode: "{{ item.mode | default('0644') }}"
         state: "{{ item.state | default('file') }}"
       loop:
-        - { dest: "/usr/local/bin/docker-entrypoint.sh", mode: "0755" }
-
-    - include_role:
-        name: bootstrap
-
-    - include_role:
-        name: python
-
-    - include_role:
-        name: locales
-
-    - include_role:
-        name: timezone
-
-    - include_role:
-        name: tini
-
-    - include_role:
-        name: gosu
-
-    - include_role:
-        name: ansible
-
-    - include_role:
-        name: cvs
-
-    - include_role:
-        name: svn
-
-    - include_role:
-        name: git
-
-    - include_role:
-        name: mercurial
-
-    - include_role:
-        name: perforce
-
-    - include_role:
-        name: openjdk
-
-    - include_role:
-        name: node
-
-    - include_role:
-        name: php
-
-    - include_role:
-        name: rclone
-
-    - include_role:
-        name: restic
-
-    - include_role:
-        name: sshd
+        - { dest: "/root/.profile" }
+        - { dest: "/root/.bashrc" }
+        - { dest: "/root/.ssh/authorized_keys", mode: "0600" }
+        - { dest: "/root/.ssh/config", mode: "0600" }
+        - { dest: "/root/.bash_logout" }

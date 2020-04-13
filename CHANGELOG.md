@@ -4,11 +4,7 @@
 
 ### Major Changes
 
-## 18.04.4-4alvistack9 - 2020-04-11
-
-### Major Changes
-
-  - Provision with systemd support
+  - Rename `post_tasks.yml` as `side_effect.yml`
   - Add Ubuntu 20.04 support
   - Remove Ubuntu 16.04 support
 
