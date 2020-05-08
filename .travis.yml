@@ -14,7 +14,6 @@ env:
 
 jobs:
   allow_failures:
-    - env: MOLECULE_SCENARIO_NAME="20.04"
     - env: MOLECULE_SCENARIO_NAME="19.10"
 
 before_install:
