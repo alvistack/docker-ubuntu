@@ -20,6 +20,9 @@ if [ "$1" = '/usr/sbin/sshd' ]; then
     chmod 0700 /root
     chmod 0700 /root/.ssh
     chmod 0600 /root/.ssh/*
+
+    # Copy /etc/skel to /root
+    cp -rfTn /etc/skel /root
 fi
 
 exec "$@"
