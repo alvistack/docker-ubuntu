@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Replace `tini` with `catatonit`
   - Rename `post_tasks.yml` as `side_effect.yml`
   - Add Ubuntu 20.04 support
   - Remove Ubuntu 16.04 support

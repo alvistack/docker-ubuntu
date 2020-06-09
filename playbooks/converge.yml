@@ -91,7 +91,7 @@
         name: timezone
 
     - include_role:
-        name: tini
+        name: catatonit
 
     - include_role:
         name: gosu
