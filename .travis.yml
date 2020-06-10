@@ -12,10 +12,6 @@ env:
     - MOLECULE_SCENARIO_NAME="19.10"
     - MOLECULE_SCENARIO_NAME="18.04"
 
-jobs:
-  allow_failures:
-    - env: MOLECULE_SCENARIO_NAME="19.10"
-
 before_install:
   - |
     sudo apt-get -y purge python3-openssl && sudo apt-get -y autoremove
