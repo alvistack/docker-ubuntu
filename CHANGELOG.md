@@ -1,9 +1,15 @@
 # Docker Image Packaging for Ubuntu
 
-## 18.04.4-XalvistackY - TBC
+## 20.04-XalvistackY - TBC
 
 ### Major Changes
 
+## 20.04-4alvistack3 - 2020-06-10
+
+### Major Changes
+
+  - Revamp `create`, `side_effect`, `verify` and `destroy` logic
+  - Replace `tini` with `catatonit`
   - Rename `post_tasks.yml` as `side_effect.yml`
   - Add Ubuntu 20.04 support
   - Remove Ubuntu 16.04 support

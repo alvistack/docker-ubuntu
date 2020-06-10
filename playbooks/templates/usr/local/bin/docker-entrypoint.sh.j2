@@ -14,6 +14,9 @@ if [ "$1" = '/usr/sbin/sshd' ]; then
     rm -rf /etc/ssh/ssh_host_*
     ssh-keygen -A
 
+    # Copy /etc/skel to /root
+    cp -rfTn /etc/skel /root
+
     # Set correct permission for /root/.ssh
     mkdir -p /root/.ssh
     chown root:root /root
