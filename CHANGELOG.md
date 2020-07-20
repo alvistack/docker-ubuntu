@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Remove Ubuntu 19.10 support
+
 ## 20.04-4alvistack4 - 2020-06-10
 
 ### Major Changes
