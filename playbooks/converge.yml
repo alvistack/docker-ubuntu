@@ -85,6 +85,9 @@
         name: python
 
     - include_role:
+        name: vim
+
+    - include_role:
         name: locales
 
     - include_role:
