@@ -26,6 +26,10 @@
 	path = roles/locales
 	url = https://github.com/alvistack/ansible-role-locales.git
 	branch = develop
+[submodule "roles/mariadb"]
+	path = roles/mariadb
+	url = https://github.com/alvistack/ansible-role-mariadb.git
+	branch = develop
 [submodule "roles/mercurial"]
 	path = roles/mercurial
 	url = https://github.com/alvistack/ansible-role-mercurial.git
@@ -46,6 +50,10 @@
 	path = roles/php
 	url = https://github.com/alvistack/ansible-role-php.git
 	branch = develop
+[submodule "roles/postgres"]
+	path = roles/postgres
+	url = https://github.com/alvistack/ansible-role-postgres.git
+	branch = develop
 [submodule "roles/python"]
 	path = roles/python
 	url = https://github.com/alvistack/ansible-role-python.git
@@ -57,6 +65,10 @@
 [submodule "roles/restic"]
 	path = roles/restic
 	url = https://github.com/alvistack/ansible-role-restic.git
+	branch = develop
+[submodule "roles/sqlite"]
+	path = roles/sqlite
+	url = https://github.com/alvistack/ansible-role-sqlite.git
 	branch = develop
 [submodule "roles/sshd"]
 	path = roles/sshd
