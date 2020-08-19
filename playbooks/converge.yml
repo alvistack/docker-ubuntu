@@ -118,6 +118,15 @@
         name: perforce
 
     - include_role:
+        name: sqlite
+
+    - include_role:
+        name: mariadb
+
+    - include_role:
+        name: postgres
+
+    - include_role:
         name: openjdk
 
     - include_role:

@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Install SQLite, MariaDB and PostgreSQL with Role
   - Upgrade Travis CI test as Ubuntu Focal based
   - Upgrade minimal Ansible support to 2.10.0
   - Remove Ubuntu 19.10 support
