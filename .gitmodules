@@ -70,3 +70,7 @@
 	path = roles/timezone
 	url = https://github.com/alvistack/ansible-role-timezone.git
 	branch = develop
+[submodule "roles/vim"]
+	path = roles/vim
+	url = https://github.com/alvistack/ansible-role-vim.git
+	branch = develop
