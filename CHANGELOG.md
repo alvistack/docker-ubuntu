@@ -1,9 +1,16 @@
 # Docker Image Packaging for Ubuntu
 
-## 20.04-XalvistackY - TBC
+## 20.04.1-XalvistackY - TBC
 
 ### Major Changes
 
+  - Refine Molecule matrix
+
+## 20.04.1-4alvistack2 - 2020-08-26
+
+### Major Changes
+
+  - Upgrade minimal Ansible Lint support to 4.3.2
   - Install SQLite, MariaDB and PostgreSQL with Role
   - Upgrade Travis CI test as Ubuntu Focal based
   - Upgrade minimal Ansible support to 2.10.0
