@@ -44,6 +44,7 @@
       loop:
         - { dest: "/root", mode: "0700" }
         - { dest: "/root/.ssh", mode: "0700" }
+        - { dest: "/run/sshd" }
 
     - name: copy templates
       template:
