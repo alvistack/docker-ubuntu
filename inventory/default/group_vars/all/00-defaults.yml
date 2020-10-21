@@ -15,5 +15,5 @@
 # limitations under the License.
 
 openjdk_release: "15"
-node_release: "14"
+node_release: "15"
 php_release: "7.4"
