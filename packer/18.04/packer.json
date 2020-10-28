@@ -12,7 +12,7 @@
                 "VOLUME /root",
                 "WORKDIR /root",
                 "EXPOSE 22",
-                "ENTRYPOINT [\"catatonit\", \"-g\",  \"--\",  \"docker-entrypoint.sh\"]",
+                "ENTRYPOINT [\"catatonit\", \"-g\", \"--\", \"docker-entrypoint.sh\"]",
                 "CMD [\"/usr/sbin/sshd\", \"-eD\"]"
             ]
         }
