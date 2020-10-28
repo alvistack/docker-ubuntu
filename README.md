@@ -9,7 +9,7 @@ Ubuntu is a free and open-source operating system and Linux distribution based o
 
 Learn more about Ubuntu: <https://www.ubuntu.com/>
 
-## Supported Tags and Respective `Dockerfile` Links
+## Supported Tags and Respective Packer Template Links
 
   - [`20.04`, `latest`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/20.04/packer.json)
   - [`18.04`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/18.04/packer.json)
