@@ -5,8 +5,6 @@
 ### Major Changes
 
   - Revamp with Packer
-  - Add Node.js 15 support
-  - Remove Node.js 14 support
 
 ## 20.04.1-4alvistack7 - 2020-10-14
 
