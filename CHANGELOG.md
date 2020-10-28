@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Revamp with Packer
   - Add Node.js 15 support
   - Remove Node.js 14 support
 
