@@ -22,10 +22,8 @@ before_install:
     curl -skL https://keybase.io/hashicorp/pgp_keys.asc | sudo gpg --import
     gpg --verify packer_1.6.4_SHA256SUMS.sig packer_1.6.4_SHA256SUMS
     sha256sum -c packer_1.6.4_SHA256SUMS 2>&1 | grep OK
-    sudo unzip packer_1.6.4_linux_amd64.zip
-    sudo install -o root -g root -m 0755 packer /usr/local/bin/packer
-    rm -rf packer packer_1.6.4_*
-
+    sudo unzip -qq -d /usr/local/bin packer_1.6.4_linux_amd64.zip
+    rm -rf packer_1.6.4_*
 
   - |
     sudo apt-get update
