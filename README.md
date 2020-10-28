@@ -11,8 +11,8 @@ Learn more about Ubuntu: <https://www.ubuntu.com/>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`20.04`, `latest`](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/20.04/Dockerfile.j2)
-  - [`18.04`](https://github.com/alvistack/docker-ubuntu/blob/master/molecule/18.04/Dockerfile.j2)
+  - [`20.04`, `latest`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/20.04/packer.json)
+  - [`18.04`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/18.04/packer.json)
 
 ## Overview
 
@@ -20,8 +20,7 @@ This Docker container makes it easy to get an instance of SSHD up and running wi
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
-  - Minimized `Dockerfile` for meta data definition
-  - Provision by Ansible and Molecule Docker driver in single layer
+  - Packaging by Packer Docker builder and Ansible provisioner in single layer
   - Handle `ENTRYPOINT` with [catatonit](https://github.com/openSUSE/catatonit)
   - Handle `CMD` with SSHD
 
