@@ -11,6 +11,7 @@ Learn more about Ubuntu: <https://www.ubuntu.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
+  - [`20.10`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/20.10/packer.json)
   - [`20.04`, `latest`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/20.04/packer.json)
   - [`18.04`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/18.04/packer.json)
 

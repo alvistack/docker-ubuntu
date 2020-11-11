@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Support Ubuntu 20.10
   - Revamp with Packer
 
 ## 20.04.1-4alvistack7 - 2020-10-14

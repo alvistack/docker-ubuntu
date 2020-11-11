@@ -8,6 +8,7 @@ language: shell
 
 env:
   jobs:
+    - PACKER_BUILDER_NAME="20.10"
     - PACKER_BUILDER_NAME="20.04"
     - PACKER_BUILDER_NAME="18.04"
 
