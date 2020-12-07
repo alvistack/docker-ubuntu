@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Migrate from Travis CI to GitLab CI
   - Support Ubuntu 20.10
   - Revamp with Packer
 
