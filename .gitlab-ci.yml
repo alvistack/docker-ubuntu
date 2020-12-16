@@ -88,9 +88,6 @@
     - *script-docker-push
 
 default:
-  cache:
-    paths:
-      - packer/*/output-docker/*.tar.gz
   before_script:
     - *script-git-submodule
 
@@ -99,6 +96,8 @@ build:docker-20.10:
   stage: build
   cache:
     key: "$CI_PIPELINE_ID-docker-20.10"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.10"
@@ -108,6 +107,8 @@ test:docker-20.10:
   stage: test
   cache:
     key: "$CI_PIPELINE_ID-docker-20.10"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.10"
@@ -119,6 +120,8 @@ deploy:docker-20.10:
   stage: deploy
   cache:
     key: "$CI_PIPELINE_ID-docker-20.10"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.10"
@@ -130,6 +133,8 @@ build:docker-20.04:
   stage: build
   cache:
     key: "$CI_PIPELINE_ID-docker-20.04"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.04"
@@ -139,6 +144,8 @@ test:docker-20.04:
   stage: test
   cache:
     key: "$CI_PIPELINE_ID-docker-20.04"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.04"
@@ -150,6 +157,8 @@ deploy:docker-20.04:
   stage: deploy
   cache:
     key: "$CI_PIPELINE_ID-docker-20.04"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.04"
@@ -161,6 +170,8 @@ build:docker-18.04:
   stage: build
   cache:
     key: "$CI_PIPELINE_ID-docker-18.04"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "18.04"
@@ -170,6 +181,8 @@ test:docker-18.04:
   stage: test
   cache:
     key: "$CI_PIPELINE_ID-docker-18.04"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "18.04"
@@ -181,6 +194,8 @@ deploy:docker-18.04:
   stage: deploy
   cache:
     key: "$CI_PIPELINE_ID-docker-18.04"
+    paths:
+      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "18.04"
