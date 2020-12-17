@@ -70,6 +70,9 @@
     sudo docker push $_ORG/$_IMAGE:$_TAG
 
 .job-packer-build: &job-packer-build
+  cache:
+    paths:
+      - packer/*/output-docker/*.tar.gz
   script:
     - *script-bootstrap-packer
     - *script-bootstrap-docker
@@ -78,11 +81,19 @@
     - *script-packer-build
 
 .job-docker-run: &job-docker-run
+  cache:
+    paths:
+      - packer/*/output-docker/*.tar.gz
+    policy: pull
   script:
     - *script-bootstrap-docker
     - *script-docker-run
 
 .job-docker-push: &job-docker-push
+  cache:
+    paths:
+      - packer/*/output-docker/*.tar.gz
+    policy: pull
   script:
     - *script-bootstrap-docker
     - *script-docker-push
@@ -96,8 +107,6 @@ build:docker-20.10:
   stage: build
   cache:
     key: "$CI_PIPELINE_ID-docker-20.10"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.10"
@@ -107,12 +116,10 @@ test:docker-20.10:
   stage: test
   cache:
     key: "$CI_PIPELINE_ID-docker-20.10"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.10"
-  dependencies:
+  needs:
     - build:docker-20.10
 
 deploy:docker-20.10:
@@ -120,12 +127,10 @@ deploy:docker-20.10:
   stage: deploy
   cache:
     key: "$CI_PIPELINE_ID-docker-20.10"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.10"
-  dependencies:
+  needs:
     - test:docker-20.10
 
 build:docker-20.04:
@@ -133,8 +138,6 @@ build:docker-20.04:
   stage: build
   cache:
     key: "$CI_PIPELINE_ID-docker-20.04"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.04"
@@ -144,12 +147,10 @@ test:docker-20.04:
   stage: test
   cache:
     key: "$CI_PIPELINE_ID-docker-20.04"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.04"
-  dependencies:
+  needs:
     - build:docker-20.04
 
 deploy:docker-20.04:
@@ -157,12 +158,10 @@ deploy:docker-20.04:
   stage: deploy
   cache:
     key: "$CI_PIPELINE_ID-docker-20.04"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.04"
-  dependencies:
+  needs:
     - test:docker-20.04
 
 build:docker-18.04:
@@ -170,8 +169,6 @@ build:docker-18.04:
   stage: build
   cache:
     key: "$CI_PIPELINE_ID-docker-18.04"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "18.04"
@@ -181,12 +178,10 @@ test:docker-18.04:
   stage: test
   cache:
     key: "$CI_PIPELINE_ID-docker-18.04"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "18.04"
-  dependencies:
+  needs:
     - build:docker-18.04
 
 deploy:docker-18.04:
@@ -194,10 +189,8 @@ deploy:docker-18.04:
   stage: deploy
   cache:
     key: "$CI_PIPELINE_ID-docker-18.04"
-    paths:
-      - packer/*/output-docker/*.tar.gz
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "18.04"
-  dependencies:
+  needs:
     - test:docker-18.04
