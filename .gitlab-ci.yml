@@ -96,6 +96,7 @@ deploy:docker-20.10:
     key: "$CI_PIPELINE_ID-docker-20.10"
     paths:
       - packer/*/output-docker/*.tar.gz
+    policy: pull
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.10"
@@ -120,6 +121,7 @@ deploy:docker-20.04:
     key: "$CI_PIPELINE_ID-docker-20.04"
     paths:
       - packer/*/output-docker/*.tar.gz
+    policy: pull
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "20.04"
@@ -144,6 +146,7 @@ deploy:docker-18.04:
     key: "$CI_PIPELINE_ID-docker-18.04"
     paths:
       - packer/*/output-docker/*.tar.gz
+    policy: pull
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "18.04"
