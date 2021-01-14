@@ -1,9 +1,9 @@
 # Docker Image Packaging for Ubuntu
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-ubuntu/master)](https://gitlab.com/alvistack/docker-ubuntu/-/pipelines)
+[![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-ubuntu/master)](https://gitlab.com/alvistack/docker-ubuntu/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu.svg)](https://hub.docker.com/r/alvistack/ubuntu/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu-20.04.svg)](https://hub.docker.com/r/alvistack/ubuntu-20.04)
 
 Ubuntu is a free and open-source operating system and Linux distribution based on Debian.
 
@@ -11,9 +11,12 @@ Learn more about Ubuntu: <https://www.ubuntu.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`20.10`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-20.10/packer.json)
-  - [`20.04`, `latest`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-20.04/packer.json)
-  - [`18.04`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-18.04/packer.json)
+  - [`alvistack/ubuntu-20.10`](https://hub.docker.com/r/alvistack/ubuntu-20.10)
+      - [`packer/docker-20.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-20.10/packer.json)
+  - [`alvistack/ubuntu-20.04`](https://hub.docker.com/r/alvistack/ubuntu-20.04)
+      - [`packer/docker-20.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-20.04/packer.json)
+  - [`alvistack/ubuntu-18.04`](https://hub.docker.com/r/alvistack/ubuntu-18.04)
+      - [`packer/docker-18.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-18.04/packer.json)
 
 ## Overview
 
@@ -60,13 +63,13 @@ Now you could SSH to it as normal:
 
 ## Versioning
 
-### `alvistack/ubuntu:latest`
+### `YYYYMMDD.Y.Z`
 
-The `latest` tag matches the most recent [GitHub Release](https://github.com/alvistack/docker-ubuntu/releases) of this repository. Thus using `alvistack/ubuntu:latest` or `alvistack/ubuntu` will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-ubuntu/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
-### `alvistack/ubuntu:<version>`
+### `YYYYMMDD.0.0`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-ubuntu) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](https://gitlab.com/alvistack/docker-ubuntu/-/pipelines) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
