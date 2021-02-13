@@ -106,6 +106,9 @@
         name: php
 
     - include_role:
+        name: httpd
+
+    - include_role:
         name: rclone
 
     - include_role:

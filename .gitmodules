@@ -22,6 +22,10 @@
 	path = roles/gosu
 	url = https://github.com/alvistack/ansible-role-gosu.git
 	branch = develop
+[submodule "roles/httpd"]
+	path = roles/httpd
+	url = https://github.com/alvistack/ansible-role-httpd.git
+	branch = develop
 [submodule "roles/locales"]
 	path = roles/locales
 	url = https://github.com/alvistack/ansible-role-locales.git
