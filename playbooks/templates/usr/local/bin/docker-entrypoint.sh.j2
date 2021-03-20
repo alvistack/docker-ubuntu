@@ -2,7 +2,7 @@
 
 # {{ ansible_managed }}
 
-set -euo pipefail
+set -euxo pipefail
 
 # Prepend executable if command starts with an option
 if [ "${1:0:1}" = '-' ]; then
