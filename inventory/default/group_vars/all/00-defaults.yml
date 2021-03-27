@@ -14,6 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-openjdk_release: "11"
+openjdk_release: "16"
 node_release: "14"
 php_release: "7.4"
