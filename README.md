@@ -5,12 +5,14 @@
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu-20.04.svg)](https://hub.docker.com/r/alvistack/ubuntu-20.04)
 
-Ubuntu is a free and open-source operating system and Linux distribution based on Debian.
+Ubuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things. It is the world's most popular operating system across public clouds and OpenStack clouds. It is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale. Fast, secure and simple, Ubuntu powers millions of PCs worldwide.
 
-Learn more about Ubuntu: <https://www.ubuntu.com/>
+Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
+  - [`alvistack/ubuntu-21.04`](https://hub.docker.com/r/alvistack/ubuntu-21.04)
+      - [`packer/docker-21.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-21.04/packer.json)
   - [`alvistack/ubuntu-20.10`](https://hub.docker.com/r/alvistack/ubuntu-20.10)
       - [`packer/docker-20.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-20.10/packer.json)
   - [`alvistack/ubuntu-20.04`](https://hub.docker.com/r/alvistack/ubuntu-20.04)
@@ -33,14 +35,14 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 Start SSHD:
 
     # Pull latest image
-    docker pull alvistack/ubuntu
+    docker pull alvistack/ubuntu-20.04
     
     # Run as detach
     docker run \
         -itd \
         --name ubuntu \
         --publish 2222:22 \
-        alvistack/ubuntu
+        alvistack/ubuntu-20.04
 
 **Success**. SSHD is now available on port `2222`.
 
