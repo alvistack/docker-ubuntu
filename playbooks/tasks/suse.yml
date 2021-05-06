@@ -19,7 +19,7 @@
     set -eu
     rm -rf /etc/zypp/repos.d/*
   changed_when: false
-  ignore_errors: true
+  failed_when: false
 
 - name: zypper addrepo
   vars:
