@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Initialize with `verify.yml` with first start
   - Upgrade minimal Ansible support to 4.0.0
   - Sync structure with `alvistack/vagrant-ubuntu`
   - Support Ubuntu 21.04

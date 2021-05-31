@@ -4,29 +4,14 @@
 
 set -euxo pipefail
 
-# Prepend executable if command starts with an option
+# Prepend executable if command starts with an option.
 if [ "${1:0:1}" = '-' ]; then
     set -- /usr/sbin/sshd "$@"
 fi
 
+# Verify configuration with Ansible.
 if [ "$1" = '/usr/sbin/sshd' ]; then
-    # Regenerate OpenSSH host keys
-    rm -rf /etc/ssh/ssh_host_*
-    ssh-keygen -A
-
-    # Ensure /run/sshd exists
-    mkdir -p /run/sshd
-
-    # Copy /etc/skel to /root
-    cp -rfTn /etc/skel /root
-
-    # Set correct permission for /root/.ssh
-    mkdir -p /root/.ssh
-    touch /root/.ssh/authorized_keys
-    chown -Rf root:root /root
-    chmod 0700 /root
-    chmod 0700 /root/.ssh
-    chmod 0600 /root/.ssh/*
+    ansible-playbook /etc/ansible/playbooks/verify.yml
 fi
 
 exec "$@"
