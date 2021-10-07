@@ -9,10 +9,14 @@ if [ "${1:0:1}" = '-' ]; then
     set -- /usr/sbin/sshd "$@"
 fi
 
+# Modify Ansible inventory with active hostname.
+if [ "$(id -u)" = '0' ]; then
+    _HOSTNAME="$(hostname -s)"
+    sed -i "s/localhost/$_HOSTNAME/g" /etc/ansible/hosts
+fi
+
 # Verify configuration with Ansible.
 if [ "$1" = '/usr/sbin/sshd' ]; then
-    _HOSTNAME="$(hostname -s)"
-    sed -i "s/localhost/${_HOSTNAME}/g" /etc/ansible/hosts
     ansible-playbook /etc/ansible/playbooks/verify.yml
 fi
 
