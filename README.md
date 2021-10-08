@@ -13,6 +13,8 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
+  - [`alvistack/ubuntu-21.10`](https://hub.docker.com/r/alvistack/ubuntu-21.10)
+      - [`packer/docker-21.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-21.10/packer.json)
   - [`alvistack/ubuntu-21.04`](https://hub.docker.com/r/alvistack/ubuntu-21.04)
       - [`packer/docker-21.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-21.04/packer.json)
   - [`alvistack/ubuntu-20.10`](https://hub.docker.com/r/alvistack/ubuntu-20.10)
