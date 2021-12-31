@@ -3,7 +3,7 @@
 <img src="/alvistack.svg" width="75" alt="AlviStack">
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-ubuntu/master)](https://gitlab.com/alvistack/docker-ubuntu/-/pipelines)
-[![GitHub release](https://img.shields.io/github/release/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/releases)
+[![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu-20.04.svg)](https://hub.docker.com/r/alvistack/ubuntu-20.04)
 
@@ -69,7 +69,7 @@ Now you could SSH to it as normal:
 
 ### `YYYYMMDD.Y.Z`
 
-Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-ubuntu/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-ubuntu/tags) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
 ### `YYYYMMDD.0.0`
 
