@@ -1,6 +1,6 @@
 # Docker Image Packaging for Ubuntu
 
-<img src="/alvistack.svg" width="75" alt="AlviStack">
+<a href="https://alvistack.com" title="AlviStack" target="_blank"><img src="/alvistack.svg" height="75" alt="AlviStack"></a>
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-ubuntu/master)](https://gitlab.com/alvistack/docker-ubuntu/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/tags)
