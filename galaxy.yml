@@ -15,7 +15,7 @@
 # limitations under the License.
 
 namespace: alvistack
-name: docker-ubuntu
+name: ubuntu
 description: Docker Image Packaging for Ubuntu
 
 version: 0.0.0
