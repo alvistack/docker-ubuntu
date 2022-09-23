@@ -104,6 +104,31 @@ default:
   before_script:
     - *script-git-submodule
 
+build:docker-22.10:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-docker-22.10"
+    paths:
+      - packer/*/output-docker
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "22.10"
+
+deploy:docker-22.10:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-docker-22.10"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "22.10"
+  needs:
+    - build:docker-22.10
+
 build:docker-22.04:
   <<: *job-packer-build
   stage: build
