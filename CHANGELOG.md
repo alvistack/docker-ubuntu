@@ -29,9 +29,7 @@
 ### Major Changes
 
   - Support Ansible community package 6.1.0
-
   - Remove Ubuntu 21.10 support
-
   - Remove Ubuntu 21.04 support
 
 ## 20220622.1.1 - 2022-06-22
