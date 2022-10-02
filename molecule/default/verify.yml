@@ -23,9 +23,10 @@
   become: true
   tasks:
     - name: docker-entrypoint.sh
-      ansible.builtin.shell: |
-        set -euxo pipefail
-        /usr/local/bin/docker-entrypoint.sh /usr/sbin/sshd -eD
+      ansible.builtin.shell:
+        cmd: |
+          set -euxo pipefail
+          /usr/local/bin/docker-entrypoint.sh /usr/sbin/sshd -eD
       args:
         executable: "/bin/bash"
       async: 300
