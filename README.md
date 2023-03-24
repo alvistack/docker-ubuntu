@@ -5,7 +5,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-ubuntu/master)](https://gitlab.com/alvistack/docker-ubuntu/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/tags)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu-20.04.svg)](https://hub.docker.com/r/alvistack/ubuntu-20.04)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu-22.04.svg)](https://hub.docker.com/r/alvistack/ubuntu-22.04)
 
 Ubuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things. It is the world's most popular operating system across public clouds and OpenStack clouds. It is the number one platform for containers; from Docker to Kubernetes to LXD, Ubuntu can run your containers at scale. Fast, secure and simple, Ubuntu powers millions of PCs worldwide.
 
@@ -13,6 +13,8 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
+-   [`alvistack/ubuntu-23.04`](https://hub.docker.com/r/alvistack/ubuntu-23.04)
+    -   [`packer/docker-23.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-23.04/packer.json)
 -   [`alvistack/ubuntu-22.10`](https://hub.docker.com/r/alvistack/ubuntu-22.10)
     -   [`packer/docker-22.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-22.10/packer.json)
 -   [`alvistack/ubuntu-22.04`](https://hub.docker.com/r/alvistack/ubuntu-22.04)
@@ -37,14 +39,14 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 Start SSHD:
 
     # Pull latest image
-    docker pull alvistack/ubuntu-20.04
+    docker pull alvistack/ubuntu-22.04
 
     # Run as detach
     docker run \
         -itd \
         --name ubuntu \
         --publish 2222:22 \
-        alvistack/ubuntu-20.04
+        alvistack/ubuntu-22.04
 
 **Success**. SSHD is now available on port `2222`.
 
