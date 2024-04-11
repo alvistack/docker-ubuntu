@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/docker-ubuntu.svg)](https://git
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/docker-ubuntu.svg)](https://github.com/alvistack/docker-ubuntu/blob/master/LICENSE)
 [![Docker
-Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu-22.04.svg)](https://hub.docker.com/r/alvistack/ubuntu-22.04)
+Pulls](https://img.shields.io/docker/pulls/alvistack/ubuntu-24.04.svg)](https://hub.docker.com/r/alvistack/ubuntu-24.04)
 
 Ubuntu is a Debian-based Linux operating system that runs from the
 desktop to the cloud, to all your internet connected things. It is the
@@ -22,6 +22,8 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
+-   [`alvistack/ubuntu-24.04`](https://hub.docker.com/r/alvistack/ubuntu-24.04)
+    -   [`packer/docker-24.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-24.04/packer.json)
 -   [`alvistack/ubuntu-23.10`](https://hub.docker.com/r/alvistack/ubuntu-23.10)
     -   [`packer/docker-23.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-23.10/packer.json)
 -   [`alvistack/ubuntu-22.04`](https://hub.docker.com/r/alvistack/ubuntu-22.04)
@@ -48,14 +50,14 @@ Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 Start SSHD:
 
     # Pull latest image
-    docker pull alvistack/ubuntu-22.04
+    docker pull alvistack/ubuntu-24.04
 
     # Run as detach
     docker run \
         -itd \
         --name ubuntu \
         --publish 2222:22 \
-        alvistack/ubuntu-22.04
+        alvistack/ubuntu-24.04
 
 **Success**. SSHD is now available on port `2222`.
 
