@@ -38,7 +38,7 @@
         "DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates curl gcc hostname iproute2 language-pack-en locales python3 sudo",
         "curl -sLO http://ftp.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-lib2to3_3.12.3-1_all.deb",
         "curl -sLO http://ftp.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-distutils_3.12.3-1_all.deb",
-        "curl -sLO http://ftp.debian.org/debian/pool/main/r/rsync/rsync_3.3.0-1_amd64.deb",
+        "curl -sLO http://archive.ubuntu.com/ubuntu/pool/main/r/rsync/rsync_3.2.7-1ubuntu1_amd64.deb",
         "DEBIAN_FRONTEND=noninteractive apt-get install -y libpopt0 && dpkg -i ./*.deb"
       ],
       "type": "shell"
