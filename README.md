@@ -22,14 +22,14 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
--   [`alvistack/ubuntu-24.04`](https://hub.docker.com/r/alvistack/ubuntu-24.04)
-    -   [`packer/docker-24.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-24.04/packer.json)
--   [`alvistack/ubuntu-23.10`](https://hub.docker.com/r/alvistack/ubuntu-23.10)
-    -   [`packer/docker-23.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-23.10/packer.json)
--   [`alvistack/ubuntu-22.04`](https://hub.docker.com/r/alvistack/ubuntu-22.04)
-    -   [`packer/docker-22.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-22.04/packer.json)
--   [`alvistack/ubuntu-20.04`](https://hub.docker.com/r/alvistack/ubuntu-20.04)
-    -   [`packer/docker-20.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-20.04/packer.json)
+- [`alvistack/ubuntu-24.04`](https://hub.docker.com/r/alvistack/ubuntu-24.04)
+  - [`packer/docker-24.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-24.04/packer.json)
+- [`alvistack/ubuntu-23.10`](https://hub.docker.com/r/alvistack/ubuntu-23.10)
+  - [`packer/docker-23.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-23.10/packer.json)
+- [`alvistack/ubuntu-22.04`](https://hub.docker.com/r/alvistack/ubuntu-22.04)
+  - [`packer/docker-22.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-22.04/packer.json)
+- [`alvistack/ubuntu-20.04`](https://hub.docker.com/r/alvistack/ubuntu-20.04)
+  - [`packer/docker-20.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-20.04/packer.json)
 
 ## Overview
 
@@ -39,11 +39,11 @@ running with Ubuntu.
 Based on [Official Ubuntu Docker
 Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
--   Packaging by Packer Docker builder and Ansible provisioner in single
-    layer
--   Handle `ENTRYPOINT` with
-    [catatonit](https://github.com/openSUSE/catatonit)
--   Handle `CMD` with SSHD
+- Packaging by Packer Docker builder and Ansible provisioner in single
+  layer
+- Handle `ENTRYPOINT` with
+  [catatonit](https://github.com/openSUSE/catatonit)
+- Handle `CMD` with SSHD
 
 ### Quick Start
 
@@ -98,12 +98,12 @@ latest packages provided by the base image project.
 
 ## License
 
--   Code released under [Apache License 2.0](LICENSE)
--   Docs released under [CC BY
-    4.0](http://creativecommons.org/licenses/by/4.0/)
+- Code released under [Apache License 2.0](LICENSE)
+- Docs released under [CC BY
+  4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
--   Wong Hoi Sing Edison
-    -   <https://twitter.com/hswong3i>
-    -   <https://github.com/hswong3i>
+- Wong Hoi Sing Edison
+  - <https://twitter.com/hswong3i>
+  - <https://github.com/hswong3i>
