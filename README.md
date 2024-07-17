@@ -24,8 +24,6 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 - [`alvistack/ubuntu-24.04`](https://hub.docker.com/r/alvistack/ubuntu-24.04)
   - [`packer/docker-24.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-24.04/packer.json)
-- [`alvistack/ubuntu-23.10`](https://hub.docker.com/r/alvistack/ubuntu-23.10)
-  - [`packer/docker-23.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-23.10/packer.json)
 - [`alvistack/ubuntu-22.04`](https://hub.docker.com/r/alvistack/ubuntu-22.04)
   - [`packer/docker-22.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-22.04/packer.json)
 - [`alvistack/ubuntu-20.04`](https://hub.docker.com/r/alvistack/ubuntu-20.04)
