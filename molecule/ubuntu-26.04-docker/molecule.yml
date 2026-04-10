@@ -18,8 +18,7 @@ driver:
   name: podman
 platforms:
   - name: ${_MOLECULE_INSTANCE_NAME}-1
-    #image: alvistack/ubuntu-26.04
-    image: ubuntu:26.04
+    image: alvistack/ubuntu-26.04
     pre_build_image: true
     privileged: true
 dependency:
