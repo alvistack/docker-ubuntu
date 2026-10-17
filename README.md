@@ -22,6 +22,8 @@ Learn more about Ubuntu: <https://ubuntu.com/>
 
 ## Supported Tags and Respective Packer Template Links
 
+- [`alvistack/ubuntu-26.10`](https://hub.docker.com/r/alvistack/ubuntu-26.10)
+  - [`packer/docker-26.10/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-26.10/packer.json)
 - [`alvistack/ubuntu-26.04`](https://hub.docker.com/r/alvistack/ubuntu-26.04)
   - [`packer/docker-26.04/packer.json`](https://github.com/alvistack/docker-ubuntu/blob/master/packer/docker-26.04/packer.json)
 - [`alvistack/ubuntu-24.04`](https://hub.docker.com/r/alvistack/ubuntu-24.04)
